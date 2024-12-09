@@ -17,5 +17,6 @@ jobs:
       - name : detect changed file
         run: |
           # 최신으로 변경 된 파일 중 txt 파일만 출력
-          echo "Changed files in the latest commit:"
-          git diff --name-only HEAD~1 HEAD
+          echo "Changed files in the latest commit: "
+          CHANGEDFILES=$(git diff --name-only HEAD~1 HEAD | grep "txt$")
+          echo CHANGEDFILES
