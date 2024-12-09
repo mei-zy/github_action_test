@@ -20,3 +20,9 @@ jobs:
           echo "Changed files in the latest commit: "
           CHANGEDFILES=$(git diff --name-only HEAD~1 HEAD | grep "txt$")
           echo $CHANGEDFILES
+
+
+          # 부모 디렉토리 경로만 출력
+          FOLDER_PATHS=$(echo "$CHANGEDFILES" | xargs -n1 dirname)
+          echo "부모 디렉토리 경로 출력 : "
+          echo "$FOLDER_PATHS"
