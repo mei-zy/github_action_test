@@ -31,8 +31,10 @@ jobs:
           echo "$FOLDER_PATHS"
 
           FILE_LIST_JSON=$(echo "$FOLDER_PATHS" | jq -R -s -c 'split("\n") | map(select(length > 0))')
-
           echo "output 정리"
+          echo "FILE_LIST_JSON"
+
+          
           echo "::set-output name=file_list::$FILE_LIST_JSON"
 
 
