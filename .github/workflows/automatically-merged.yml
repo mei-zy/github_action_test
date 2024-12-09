@@ -43,8 +43,8 @@ jobs:
     needs: check-merged
     strategy:
       matrix:
-        file_list: ${{fromJson(needs.check-merged.outputs.file_list)}}
+        file_path: ${{fromJson(needs.check-merged.outputs.file_list)}}
     steps:
       - name: test
         run: |
-          echo "${{ matrix.file_list }}""
+          echo "${{ matrix.file_path}}"
