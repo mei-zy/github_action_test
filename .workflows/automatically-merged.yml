@@ -1,0 +1,12 @@
+name: "automatically-merge"
+
+on:
+  push:
+    branches: ["master"]
+
+job:
+  check-merged:
+    steps:
+      #1. 코드 체크아웃
+      - name: Checkout code
+        uses: actions/checkout@v3
