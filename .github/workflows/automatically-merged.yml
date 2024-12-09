@@ -4,8 +4,9 @@ on:
   push:
     branches: ["master"]
 
-job:
+jobs:
   check-merged:
+    runs-on: ["ubuntu-latest"]
     steps:
       #1. 코드 체크아웃
       - name: Checkout code
