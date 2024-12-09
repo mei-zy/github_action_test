@@ -15,6 +15,8 @@ jobs:
       - name : detect changed file
         run: |
           # 최신으로 변경 된 파일 중 txt 파일만 출력
-          TXTFILES=$(git diff-tree --no-commit-id --name-only --diff-filter=AM -r HEAD | grep "txt$")
-          echo "변경된 txt 파일 출력 : "
-          echo "$TXTFILES"
+          # TXTFILES=$(git diff-tree --no-commit-id --name-only --diff-filter=AM -r HEAD | grep "txt$")
+          # echo "변경된 txt 파일 출력 : "
+          # echo "$TXTFILES"
+
+          git log -1 --name-only
