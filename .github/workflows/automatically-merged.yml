@@ -26,3 +26,6 @@ jobs:
           FOLDER_PATHS=$(echo "$CHANGEDFILES" | xargs -n1 dirname)
           echo "부모 디렉토리 경로 출력 : "
           echo "$FOLDER_PATHS"
+
+          FOLDER_ARRAY=($FOLDER_PATHS)
+          echo $FOLDER_ARRAY
